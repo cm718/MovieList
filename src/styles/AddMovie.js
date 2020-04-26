@@ -2,22 +2,25 @@ import styled from 'styled-components'
 
 export const Form = styled.form`
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  width: 100%;
-`
+  align-items: center;
+  margin: 15px;
+  `
 export const Input = styled.input`
   border: 1px solid #555;
   border-radius: 5px;
   border-style: solid;
   border-width: 1px;
-  margin: 5px;
+  margin-right: 5px;
   padding: 10px;
+  left: 50px;
   width: 200px;
   cursor: pointer;
+  &:focus {
+    border-style: none;
+  }
 `
 export const Button = styled.button`
-  align-self: center;
   background-color: #555;
   border: 1px solid #555;
   border-radius: 5px;

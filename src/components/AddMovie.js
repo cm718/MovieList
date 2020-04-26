@@ -5,6 +5,7 @@ import { Form, Input, Button } from '../styles/AddMovie'
 const AddMovie = () => {
   const [name, setName] = useState('')
   const [price, setPrice] = useState('')
+  // eslint-disable-next-line no-unused-vars
   const [movies, setMovies] = useContext(MovieContext)
 
   const updateName = e => setName(e.target.value)
@@ -12,28 +13,27 @@ const AddMovie = () => {
 
   const addMovie = e => {
     e.preventDefault()
-    setMovies(prevMovies => [...prevMovies, { name, price, id: 234 }])
+    setMovies(movies => [...movies, { name, price, id: 234 }])
     setName('')
     setPrice('')
+    document.getElementsByTagName('input')[0].focus()
   }
   return (
     <Form onSubmit={addMovie}>
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <Input
-          type="text"
-          name="name"
-          value={name}
-          onChange={updateName}
-          placeholder="Movie name"
-        />
-        <Input
-          type="text"
-          name="price"
-          value={price}
-          onChange={updatePrice}
-          placeholder="Movie price"
-        />
-      </div>
+      <Input
+        type="text"
+        name="name"
+        value={name}
+        onChange={updateName}
+        placeholder="Movie name"
+      />
+      <Input
+        type="text"
+        name="price"
+        value={price}
+        onChange={updatePrice}
+        placeholder="Movie price"
+      />
       <Button>Submit</Button>
     </Form>
   )
