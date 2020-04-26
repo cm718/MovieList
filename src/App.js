@@ -1,10 +1,15 @@
 import React from 'react'
+import './styles/z.css'
+import MovieList from './components/MovieList'
+import Nav from './components/Nav'
+import { MovieProvider } from './context/MovieContext'
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello React</h1>
-    </div>
+    <MovieProvider>
+      <Nav />
+      <MovieList />
+    </MovieProvider>
   )
 }
 
