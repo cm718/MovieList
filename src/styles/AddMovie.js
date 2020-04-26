@@ -13,7 +13,6 @@ export const Input = styled.input`
   border-width: 1px;
   margin-right: 5px;
   padding: 10px;
-  left: 50px;
   width: 200px;
   cursor: pointer;
   &:focus {
