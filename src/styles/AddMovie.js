@@ -5,7 +5,7 @@ export const Form = styled.form`
   justify-content: center;
   align-items: center;
   margin: 15px;
-  `
+`
 export const Input = styled.input`
   border: 1px solid #555;
   border-radius: 5px;
@@ -25,7 +25,7 @@ export const Button = styled.button`
   border-radius: 5px;
   box-shadow: none;
   color: #fff;
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding: 10px;
   width: 100px;
   &:hover {

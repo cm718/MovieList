@@ -1,4 +1,4 @@
-import React, { useState, createContext } from 'react'
+import React, { createContext, useState } from 'react'
 
 export const MovieContext = createContext()
 
@@ -23,7 +23,7 @@ export const MovieProvider = ({ children }) => {
       name: 'Rescuers Down Under',
       price: '9',
       id: 21556,
-    }
+    },
   ])
   return (
     <MovieContext.Provider value={[movies, setMovies]}>

@@ -1,6 +1,6 @@
-import React, { useState, useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { MovieContext } from '../context/MovieContext'
-import { Form, Input, Button } from '../styles/AddMovie'
+import { Button, Form, Input } from '../styles/AddMovie'
 
 const AddMovie = () => {
   const [name, setName] = useState('')
