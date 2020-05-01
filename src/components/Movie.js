@@ -1,11 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-import Card from '../styles/Card'
-
-const Text = styled.h3`
-  font-size: 1.2rem;
-  padding: 20px;
-`
+import { Card, Text } from '../styles/Movie'
 
 const Movie = ({ movie }) => {
   return (
