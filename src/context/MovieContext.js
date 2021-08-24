@@ -20,9 +20,9 @@ export const MovieProvider = ({ children }) => {
       id: 2136,
     },
     {
-      name: 'Rescuers Down Under',
+      name: 'Raiders of the Lost Ark',
       price: '9',
-      id: 21556,
+      id: 2137,
     },
   ])
   return (
