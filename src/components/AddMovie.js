@@ -1,36 +1,36 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useRef } from 'react'
 import { MovieContext } from '../context/MovieContext'
 import { Button, Form, Input } from '../styles/AddMovie'
+import useInput from '../hooks/useInput'
 
 const AddMovie = () => {
-  const [name, setName] = useState('')
-  const [price, setPrice] = useState('')
+  const [name, setName, updateNameInput] = useInput('')
+  const [price, setPrice, updatePriceInput] = useInput('')
   const [, setMovies] = useContext(MovieContext)
-
-  const updateName = e => setName(e.target.value)
-  const updatePrice = e => setPrice(e.target.value)
+  const nameInput = useRef()
 
   const addMovie = e => {
     e.preventDefault()
     setMovies(movies => [...movies, { name, price, id: Math.random() }])
     setName('')
     setPrice('')
-    document.getElementsByTagName('input')[0].focus()
+    nameInput.current.focus()
   }
   return (
     <Form onSubmit={addMovie}>
       <Input
+        ref={nameInput}
         type="text"
         name="name"
         value={name}
-        onChange={updateName}
+        onChange={e => updateNameInput(e)}
         placeholder="Enter Movie Name"
       />
       <Input
         type="text"
         name="price"
         value={price}
-        onChange={updatePrice}
+        onChange={e => updatePriceInput(e)}
         placeholder="Enter Movie Price"
       />
       <Button>Submit</Button>
