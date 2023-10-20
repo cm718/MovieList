@@ -10,7 +10,7 @@ export const MovieProvider = ({ children }) => {
       id: 2134,
     },
     {
-      name: 'Die Hard',
+      name: 'Braveheart',
       price: '12',
       id: 2135,
     },
@@ -23,6 +23,11 @@ export const MovieProvider = ({ children }) => {
       name: 'Raiders of the Lost Ark',
       price: '9',
       id: 2137,
+    },
+    {
+      name: 'Ocean\'s Eleven',
+      price: '11',
+      id: 2138,
     },
   ])
   return (
